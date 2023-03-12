@@ -1,6 +1,6 @@
-package apis;
+package hm.apis;
 
-import bean.UserDetail;
+import hm.bean.UserDetail;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

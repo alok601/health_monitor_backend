@@ -1,4 +1,4 @@
-package bean;
+package hm.bean;
 
 public class UserDetail {
     String userName;
