@@ -4,23 +4,24 @@ import hm.bean.UserDetail;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("user")
 public class GetUserDetail {
 
-    @GetMapping("/user")
-    String getAllUser() {
+    @GetMapping("/all")
+    UserDetail getAllUser() {
         UserDetail user = new UserDetail();
         user.setUserName("Vijaya Singh");
         user.setAddress("Sangria, pune");
         user.setPhoneNumber("123456789");
-        return "Test response";
+        return user;
     }
 
-    @GetMapping("/employees/{id}")
+    @GetMapping("/{id}")
     String getuser(@PathVariable Long userId) {
         return "Alok Ranjan";
     }
 
-    @PostMapping("/employees")
+    @PostMapping("/{id}")
     String addUser(@RequestBody String user) {
         return user;
     }
